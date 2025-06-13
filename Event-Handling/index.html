@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Show/Hide Paragraph</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 40px;
+      background-color: #f0f4f8;
+    }
+
+    #toggleBtn {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #5165fc;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    #toggleBtn:hover {
+      background-color: #0056b3;
+    }
+
+    #myPara {
+      display: none;
+      margin-top: 20px;
+      font-size: 18px;
+      color: #333;
+      background-color: #ffffff;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  </style>
+</head>
+<body>
+
+  <button id="toggleBtn" onclick="toggleParagraph()">Show Paragraph</button>
+
+  <p id="myPara">This is a paragraph that appears when the button is clicked.</p>
+
+  <script>
+    function toggleParagraph() {
+      const para = document.getElementById("myPara");
+      const btn = document.getElementById("toggleBtn");
+
+      if (para.style.display === "none") {
+        para.style.display = "block";
+        btn.textContent = "Hide Paragraph";
+      } else {
+        para.style.display = "none";
+        btn.textContent = "Show Paragraph";
+      }
+    }
+  </script>
+
+</body>
+</html>
